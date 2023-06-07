@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="SistemaApoioDidaticoProfissional"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="5">
+      <Item1>
+        <PackageName Value="zcomponent"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="SQLDBLaz"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="TurboPowerIPro"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="LCL"/>
+      </Item5>
+    </RequiredPackages>
+    <Units Count="25">
+      <Unit0>
+        <Filename Value="SistemaApoioDidaticoProfissional.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SistemaApoioDidaticoProfissional"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="UPrincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPrincipal"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="Arnu/uarnu.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="Arnu/uarnu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmArnu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UArnu"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="Arnu/unormas.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="Arnu/unormas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <UnitName Value="Unormas"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="Arnu/DMprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DM1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="DMprincipal"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="Arnu/Ulogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Ulogin"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="UCadastroAlunos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCadastroAlunos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCadastroAlunos"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="UCadastroProfessores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCadastroProfessores"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCadastroProfessores"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="UPesquisaAlunos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPesquisaAlunos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPesquisaAlunos"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="UPesquisaProfessores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPesquisaProfessores"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPesquisaProfessores"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="upesquisaprofessores_editarcursos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPesquisaProfessores_EditarCursos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPesquisaProfessores_EditarCursos"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="uarnupreview.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmArnuPreview"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UArnuPreview"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="uutilidades.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="UUtilidades"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="ucobasprewiew.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCobasPreview"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCobasPrewiew"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="upersonalizar.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPersonalizar"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UPersonalizar"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="Cobas/Cobas.lpi"/>
+        <IsPartOfProject Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="Cobas/Cobas.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Cobas"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="Cobas/ucalculo.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="Cobas/uTabela.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="Cobas/utabela.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <UnitName Value="uTabela"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="Cobas/ucobas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCobas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UCobas"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="usobreprojeto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSobreProjeto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="USobreProjeto"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="usobresoftware.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSobreSoftware"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="usobresoftware"/>
+      </Unit24>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="SistemaApoioDidaticoProfissional"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="Arnu;Cobas"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

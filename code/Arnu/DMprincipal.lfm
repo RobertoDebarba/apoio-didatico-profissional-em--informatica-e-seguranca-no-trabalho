@@ -1,0 +1,251 @@
+object DM1: TDM1
+  OldCreateOrder = False
+  Height = 394
+  HorizontalOffset = 407
+  VerticalOffset = 72
+  Width = 485
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Properties.Strings = (
+      'AutoEncodeStrings='
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'dbSemestral1'
+    User = 'root'
+    Password = 'luiz5505'
+    Protocol = 'mysql'
+    left = 48
+    top = 28
+  end
+  object tbUsuarios: TZTable
+    Connection = ZConnection1
+    Active = True
+    TableName = 'tb_usuarios'
+    left = 152
+    top = 28
+    object tbUsuarioscodigo_usuario: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'codigo_usuario'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object tbUsuarioslogin_usuario: TStringField
+      DisplayWidth = 180
+      FieldKind = fkData
+      FieldName = 'login_usuario'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 180
+    end
+    object tbUsuariossenha_usuario: TStringField
+      DisplayWidth = 180
+      FieldKind = fkData
+      FieldName = 'senha_usuario'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 180
+    end
+    object tbUsuarioscodigo_tipo_usuario: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'codigo_tipo_usuario'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+  end
+  object tbAlunos: TZTable
+    Connection = ZConnection1
+    Active = True
+    TableName = 'tb_alunos'
+    left = 152
+    top = 96
+    object tbAlunoscodigo_aluno: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'codigo_aluno'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object tbAlunosnome_aluno: TStringField
+      DisplayWidth = 180
+      FieldKind = fkData
+      FieldName = 'nome_aluno'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 180
+    end
+    object tbAlunoscpf_aluno: TStringField
+      DisplayWidth = 180
+      FieldKind = fkData
+      FieldName = 'cpf_aluno'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 180
+    end
+    object tbAlunoscodigo_curso: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'codigo_curso'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      OnGetText = tbAlunoscodigo_cursoGetText
+    end
+    object tbAlunoscodigo_usuario: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'codigo_usuario'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+  end
+  object tbCursos: TZTable
+    Connection = ZConnection1
+    Active = True
+    TableName = 'tb_cursos'
+    left = 152
+    top = 168
+  end
+  object tbTipo_Usuarios: TZTable
+    Connection = ZConnection1
+    Filter = 'codigo_tipo_usuario <> 3'
+    Filtered = True
+    Active = True
+    TableName = 'tb_tipo_usuarios'
+    left = 152
+    top = 240
+  end
+  object tbProfessores: TZTable
+    Connection = ZConnection1
+    Active = True
+    TableName = 'tb_professores'
+    left = 152
+    top = 312
+    object tbProfessorescodigo_professor: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'codigo_professor'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object tbProfessoresnome_professor: TStringField
+      DisplayWidth = 180
+      FieldKind = fkData
+      FieldName = 'nome_professor'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 180
+    end
+    object tbProfessorescpf_professor: TStringField
+      DisplayWidth = 180
+      FieldKind = fkData
+      FieldName = 'cpf_professor'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 180
+    end
+    object tbProfessorescodigo_usuario: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'codigo_usuario'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+  end
+  object queryPesquisaCursosProfessores: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT codigo_curso as "Cursos" FROM tb_cursos_professores'
+      'WHERE codigo_professor = :Pcodigo'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'Pcodigo'
+        ParamType = ptUnknown
+      end>
+    left = 325
+    top = 240
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'Pcodigo'
+        ParamType = ptUnknown
+      end>
+    object queryPesquisaCursosProfessoresCursos: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'Cursos'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      OnGetText = queryPesquisaCursosProfessoresCursosGetText
+    end
+  end
+  object tbUsuariosProfessores: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM tb_usuarios'
+    )
+    Params = <>
+    left = 325
+    top = 168
+  end
+  object tbUsuariosAlunos: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM tb_usuarios'
+    )
+    Params = <>
+    left = 325
+    top = 96
+  end
+end

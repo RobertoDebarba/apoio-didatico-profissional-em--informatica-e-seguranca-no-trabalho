@@ -1,0 +1,28 @@
+object DMdb: TDMdb
+  OldCreateOrder = False
+  Height = 262
+  HorizontalOffset = 236
+  VerticalOffset = 238
+  Width = 464
+  object DBSemestral: TMySQL55Connection
+    Connected = True
+    LoginPrompt = True
+    DatabaseName = 'dbSemestral1'
+    KeepConnection = True
+    Params.Strings = (
+      'Port=3306'
+    )
+    Password = 'luiz5505'
+    UserName = 'root'
+    HostName = 'localhost'
+    LogEvents = []
+    left = 37
+    top = 24
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Params = <>
+    left = 151
+    top = 30
+  end
+end
